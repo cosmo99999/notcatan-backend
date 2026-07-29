@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import { AcceptTrade, buildBoard, FourPlayerPreGameOrder, getEmptyGame, GlobalActions, randomizeBoard, seed, ThreePlayerPreGameOrder, TwoPlayerPreGameOrder, type Game, type Player } from 'notcatan-shared';
+import { AcceptTrade, buildBoard, FourPlayerPreGameOrder, getEmptyGame, GlobalActions, randomizeBoard, seed, ThreePlayerPreGameOrder, TwoPlayerPreGameOrder, type Game, type Player } from '@cosmo99999/notcatan-shared';
+
 import 'dotenv/config';
 import helmet from 'helmet';
 
