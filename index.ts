@@ -137,6 +137,8 @@ app.post('/action/:pId', async (req, res) => {
   const { pId } = req.params;
   const a: action = req.body;
   a.sentById = Number(pId);
+  console.log(GlobalActions.map(f => f.name));
+  console.log("Looking for:", a.func);
   const f = GlobalActions.find(fu => fu.name == a.func)! as ((...args: any[]) => any);
   game = f(...a.args, game);
   a.id = actionCounter++;
