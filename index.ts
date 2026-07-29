@@ -25,7 +25,7 @@ const secretkey = process.env.GAME_KEY;
 let game: Game = getEmptyGame();
 
 let actionCounter = 0;
-const actionsList: action[] = [];
+let actionsList: action[] = [];
 
 interface action {
   id?: number;
@@ -194,6 +194,8 @@ app.post('/tradeAccept/:pId', async (req, res) => {
 
 app.post('/game/reset', async (req, res) => {
   game = getEmptyGame();
+  actionCounter = 0;
+  actionsList = [];
   init();
   res.json({ message: 'game reset' });
 });
